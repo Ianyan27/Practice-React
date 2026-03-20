@@ -1,0 +1,24 @@
+.sidebar {
+    height: 100%;
+}
+
+.sidebar ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar ul li{
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    background-color: gray;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: black;
+}

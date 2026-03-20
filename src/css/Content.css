@@ -1,0 +1,25 @@
+.layout {
+    --sidebar-width: 150px;
+    --header-height: 60px;
+
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
+    height: 100vh;
+}
+
+.content-header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.content-sidebar {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.content-dashboard {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-y: auto;
+}

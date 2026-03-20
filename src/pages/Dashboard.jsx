@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
-import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
 
 import ResourceCard from '../components/cards/ResourceCard'
 
 import {getTasks} from '../services/api'
+
+import '../css/Dashboard.css'
 
 function Dashboard(){
 
@@ -31,13 +31,11 @@ function Dashboard(){
     if(error) return <p>Error: {error}</p>;
 
     return(
-        <div>
-            <Header />
-            <Sidebar />
-            <div className="dashboard">
-                <div className="task-statuses">
+        <div className="dashboard">
+            <div className="task-statuses">
 
-                </div>
+            </div>
+            <div className='resources'>
                 {tasks.map(task => <ResourceCard task={task} key={task.id}/>)}
             </div>
         </div>

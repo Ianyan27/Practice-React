@@ -1,0 +1,11 @@
+.dashboard {
+    background-color: red;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 20em;
+}
+
+.dashboard .resources {
+    background-color: gray;
+}
+

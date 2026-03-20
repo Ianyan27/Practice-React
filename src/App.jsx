@@ -1,10 +1,10 @@
-import './App.css'
-import Dashboard from './pages/Dashboard'
+import './css/App.css'
+import Content from './pages/Content'
 
 function App() {
   return(
     <>
-    <Dashboard />
+      <Content />
     </>
   )
 }
