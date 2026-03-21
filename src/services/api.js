@@ -16,5 +16,26 @@ export const getTasks = async (listId) => {
 
     const data = await response.json();
 
-    return data.tasks;
+    const tasks = data.tasks;
+
+    const statusCount = {};
+
+    for(let i = 0; i < tasks.length; i++){
+
+        const status = tasks[i].status.status;
+
+        if(statusCount[status]){
+            statusCount[status]++;
+        } else {
+            statusCount[status] = 1;
+        }
+    }
+
+    const statusArray = Object.entries(statusCount).map(([status, count]) => ({
+        [status]: count
+    }));
+
+    console.log({tasks: data.tasks, statusArray});
+
+    return {tasks: data.tasks, statusArray};
 };

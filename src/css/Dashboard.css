@@ -1,5 +1,5 @@
 .dashboard {
-    background-color: red;
+    background-color: gainsboro;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 20em;
