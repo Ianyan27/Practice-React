@@ -1,9 +1,11 @@
+import '../../css/components/StatusCard.css'
+
 function StatusCard({count}){
 
     const [status, total] = Object.entries(count)[0];
 
     return(
-    <div className='status-card'>
+    <div className='status-card' data-status={status.toLowerCase()}>
         <div className='status-item'> 
             <div className="status">
                 <span>{status}</span>

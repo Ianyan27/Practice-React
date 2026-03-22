@@ -2,10 +2,19 @@
     background-color: gainsboro;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 20em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+}
+
+.dashboard .task-statuses{
+    min-height: 125px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 125px;
+    gap: 1rem;
+    margin: 1rem;
 }
 
 .dashboard .resources {
     background-color: gray;
 }
-

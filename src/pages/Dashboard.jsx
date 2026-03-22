@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 
+import TableData from '../components/table/TableData'
 import StatusCard from '../components/cards/StatusCard'
 import ResourceCard from '../components/cards/ResourceCard'
 
@@ -41,9 +42,25 @@ function Dashboard(){
                     return <StatusCard count={count} key={label}/>
                 })}
             </div>
-            <div className='resources'>
-                {tasks.map(task => <ResourceCard task={task} key={task.id}/>)}
+            <div className='tasks'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Folder</th>
+                            <th>List</th>
+                            <th>Priority</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tasks.map(task => <TableData task={task} key={task.id}/>)}
+                    </tbody>
+                </table>
             </div>
+            {/* <div className='resources'>
+                {tasks.map(task => <ResourceCard task={task} key={task.id}/>)}
+            </div> */}
         </div>
     )
 }
