@@ -7,7 +7,7 @@ function Header(){
                 
             </div>
             <div className="user-image">
-                
+                <div></div>
             </div>
         </div>
     )
